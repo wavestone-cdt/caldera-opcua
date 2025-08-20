@@ -1,0 +1,9 @@
+name: OPCUA demo
+description: demo
+atomic_ordering:
+- fc5edf3c-8a61-43df-8ebf-fb609c8094a1
+- 5518c620-879b-4c28-80ce-d1c6ca4a8266
+- 5780a5f8-5acc-4ed2-8a3f-77d7bee048f8
+- 07161154-d673-48c0-b0e7-dbca95a8ec8c
+adversary_id: a091c73f-07b8-4bd7-81b0-a53a298c6fbf
+objective: 495a9828-cab1-44dd-a0ca-66e58177d8cc

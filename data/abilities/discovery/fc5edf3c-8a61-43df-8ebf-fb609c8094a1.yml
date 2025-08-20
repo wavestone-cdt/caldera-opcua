@@ -1,0 +1,62 @@
+- tactic: discovery
+  technique_name: Network Service Discovery
+  technique_id: T1046
+  name: Hello - Network scan - OPCUA
+  description: 'OPCUA plugin
+
+    Scan OPCUA hosts and ports to discover OPCUA servers.
+
+    Replace opcua.ip with: - a single IP address(192.168.1.10) - a range of IP addresses(192.168.1.10-20)
+    - a list of IP addresses(192.168.1.10,192.168.1.11,192.168.1.12) - a CIDR notation(192.168.1.10/24) '
+  executors:
+  - name: sh
+    platform: linux
+    command: './opcua_cli hello -i "#{opcua.ip}" -p "#{opcua.ports}"'
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - opcua_cli
+    uploads: []
+    timeout: 600
+    parsers:
+    - module: plugins.opc_ua.app.parsers.url
+      parserconfigs:
+      - source: opcua.hosts
+        edge: ''
+        target: ''
+        custom_parser_vals: {}
+    cleanup: []
+    variations: []
+    additional_info: {}
+  - name: powershell
+    platform: windows
+    command: './opcua_cli.exe hello -i "#{opcua.ip}" -p "#{opcua.ports}"'
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - opcua_cli.exe
+    uploads: []
+    timeout: 600
+    parsers:
+    - module: plugins.opc_ua.app.parsers.url
+      parserconfigs:
+      - source: opcua.hosts
+        edge: ''
+        target: ''
+        custom_parser_vals: {}
+    cleanup: []
+    variations: []
+    additional_info: {}
+  requirements: []
+  privilege: ''
+  repeatable: false
+  buckets:
+  - collection
+  additional_info: {}
+  access: {}
+  singleton: false
+  plugin: ''
+  delete_payload: false
+  id: fc5edf3c-8a61-43df-8ebf-fb609c8094a1

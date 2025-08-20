@@ -1,0 +1,44 @@
+id: 9dbfddd2-d8e1-450b-9574-478c08a76018
+name: OPCUA
+facts:
+- unique: opcua.ip
+  trait: opcua.ip
+  name: opcua.ip
+  value: 127.0.0.1
+  created: '2025-07-07T15:38:28Z'
+  score: 0
+  source: 9dbfddd2-d8e1-450b-9574-478c08a76018
+  origin_type: IMPORTED
+  links: []
+  relationships: []
+  limit_count: -1
+  collected_by: []
+  technique_id: null
+- unique: opcua.data
+  trait: opcua.data
+  name: opcua.data
+  value: '8'
+  created: '2025-07-07T15:38:28Z'
+  score: 0
+  source: 9dbfddd2-d8e1-450b-9574-478c08a76018
+  origin_type: IMPORTED
+  links: []
+  relationships: []
+  limit_count: -1
+  collected_by: []
+  technique_id: null
+- unique: opcua.ports
+  trait: opcua.ports
+  created: '2025-07-07T15:38:28Z'
+  value: '4840'
+  score: 0
+  source: 9dbfddd2-d8e1-450b-9574-478c08a76018
+  origin_type: IMPORTED
+  links: []
+  relationships: []
+  limit_count: -1
+  collected_by: []
+  technique_id: null
+rules: []
+relationships: []
+plugin: opc_ua

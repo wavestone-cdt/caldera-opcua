@@ -1,0 +1,53 @@
+- tactic: collection
+  technique_name: Data from Local System
+  technique_id: T0005
+  name: Read - Single node - OPCUA
+  description: 'OPCUA plugin
+
+    Read a single node from an OPCUA server.
+    '
+  executors:
+  - name: sh
+    platform: linux
+    command: './opcua_cli read_data -t #{opcua.hosts} -r "#{opcua.node_id}" --single'
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - opcua_cli
+    uploads: []
+    timeout: 60
+    parsers: []
+    cleanup: []
+    variations: []
+    additional_info: {}
+  - name: powershell
+    platform: windows
+    command: './opcua_cli.exe read_data -t #{opcua.hosts} -r "#{opcua.node_id}" --single'
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - opcua_cli.exe
+    uploads: []
+    timeout: 60
+    parsers: []
+    cleanup: []
+    variations: []
+    additional_info: {}
+  requirements:
+  - module: plugins.stockpile.app.requirements.paw_provenance
+    relationship_match:
+    - source: opcua.node_id
+      edge: ''
+      target: ''
+  privilege: ''
+  repeatable: false
+  buckets:
+  - aaa
+  additional_info: {}
+  access: {}
+  singleton: false
+  plugin: ''
+  delete_payload: true
+  id: 5780a5f8-5acc-4ed2-8a3f-77d7bee048f8

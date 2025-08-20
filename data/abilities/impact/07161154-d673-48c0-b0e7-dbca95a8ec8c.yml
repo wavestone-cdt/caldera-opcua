@@ -1,0 +1,48 @@
+- tactic: impact
+  technique_name: Data Manipulation 
+  technique_id: T1565
+  name: Write data OPCUA
+  description: OPCUA
+  executors:
+  - name: sh
+    platform: linux
+    command: './opcua_cli write_data -t #{opcua.hosts} -r "#{opcua.node_id}" --data #{opcua.data}'
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - opcua_cli
+    uploads: []
+    timeout: 60
+    cleanup: []
+    variations: []
+    additional_info: {}
+  - name: powershell
+    platform: windows
+    command: './opcua_cli.exe write_data -t #{opcua.hosts} -r "#{opcua.node_id}" --data #{opcua.data}'
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - opcua_cli.exe
+    uploads: []
+    timeout: 60
+    cleanup: []
+    variations: []
+    additional_info: {}
+  requirements:
+  - module: plugins.stockpile.app.requirements.paw_provenance
+    relationship_match:
+    - source: opcua.node_id
+      edge: ''
+      target: ''
+  privilege: ''
+  repeatable: false
+  buckets:
+  - collection
+  additional_info: {}
+  access: {}
+  singleton: false
+  plugin: ''
+  delete_payload: false
+  id: 07161154-d673-48c0-b0e7-dbca95a8ec8c

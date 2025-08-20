@@ -1,0 +1,23 @@
+
+[92m[1m[+] [0mopc.tcp://127.0.0.1:4840 - Valid OPC UA response, starting analysis
+[94m[1m[*] [0mopc.tcp://127.0.0.1:4840 - Available Endpoints:
+[94m[1m[*] [0mopc.tcp://127.0.0.1:4840 - ----------------------------------------
+[94m[1m[*] [0mopc.tcp://127.0.0.1:4840 - Endpoint: opc.tcp://127.0.0.1:4840
+[93m[1m[!] [0mopc.tcp://127.0.0.1:4840 - Security mode: 
+[93m[1m[!] [0mopc.tcp://127.0.0.1:4840 - Authentication type accepted: , , 
+[94m[1m[*] [0mopc.tcp://127.0.0.1:4840 - ----------------------------------------
+[92m[1m[+] [0mopc.tcp://127.0.0.1:4840 - Successful Anonymous authentication
+[94m[1m[*] [0mopc.tcp://127.0.0.1:4840 - Interesting Nodes:
+[94m[1m[*] [0mopc.tcp://127.0.0.1:4840 - Name: 2:MyWritableVariable - Id: ns=2;i=2
+[94m[1m[*] [0mopc.tcp://127.0.0.1:4840 - ['CurrentRead', 'CurrentWrite']
+
+
++----------------------+-----------------------------------+
+|                      | Results                           |
++======================+===================================+
+| Targets scanned      | 1 target(s)                       |
+| Anonymous connection | [93m[1mALLOWED[0m (for 1 targets)           |
+| Security mode        | Mode None [93m[1mALLOWED[0m (for 1 targets) |
+| Authentication       | 1 successful authentication(s)    |
+| Writable nodes       | 1 nodes can be modified           |
++----------------------+-----------------------------------+

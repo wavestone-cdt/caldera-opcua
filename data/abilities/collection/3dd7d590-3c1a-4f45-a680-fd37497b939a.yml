@@ -1,0 +1,66 @@
+- tactic: collection
+  technique_name: Data from Local System
+  technique_id: T1005
+  name: Server Config - nodes executable - OPCUA
+  description: 'OPCUA plugin
+
+
+    Scan OPCUA servers to give server configurations and executable methods.'
+  executors:
+  - name: sh
+    platform: linux
+    command: './opcua_cli server_config -t #{opcua.hosts} -ne'
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - opcua_cli
+    uploads: []
+    timeout: 600
+    parsers:
+    - module: plugins.opc_ua.app.parsers.nodeID
+      parserconfigs:
+      - source: opcua.node_id
+        edge: ''
+        target: ''
+        custom_parser_vals: {}
+    cleanup: []
+    variations: []
+    additional_info: {}
+  - name: powershell
+    platform: windows
+    command: './opcua_cli.exe server_config -t #{opcua.hosts} -nw'
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - opcua_cli.exe
+    uploads: []
+    timeout: 600
+    parsers:
+    - module: plugins.opc_ua.app.parsers.nodeID
+      parserconfigs:
+      - source: opcua.node_id
+        edge: ''
+        target: ''
+        custom_parser_vals: {}
+    cleanup: []
+    variations: []
+    additional_info: {}
+  requirements:
+  - module: plugins.stockpile.app.requirements.paw_provenance
+    relationship_match:
+    - source: opcua.hosts
+      edge: ''
+      target: ''
+  privilege: ''
+  repeatable: false
+  buckets:
+  - collection
+  additional_info: {}
+  access: {}
+  singleton: false
+  plugin: opc_ua
+  delete_payload: false
+  id: 3dd7d590-3c1a-4f45-a680-fd37497b939a
+
