@@ -13,8 +13,7 @@
 
 ## Purpose & Motivation
 
-* **Extend Caldera’s Native Capabilities:** Caldera does not currently support OPC‑UA, a common protocol in Industrial Control Systems (ICS). This plugin fills that gap. ([GitHub][1])
-* **Community Contribution:** As Caldera is open-source, community feedback and contributions are crucial. This plugin supports both internal and broader community needs.
+* **Extend Caldera’s Native Capabilities:** Caldera does not currently support OPC‑UA, a common protocol in Industrial Control Systems (ICS). This plugin fills that gap.
 
 ---
 
@@ -67,7 +66,7 @@ Once installed, the plugin should appear within Caldera’s plugin library. You 
 
 ## Testing the Plugin
 
-* Use a mock or real OPC‑UA server (e.g., with `python-opcua` demo server or `open62541` server) ([GitHub][1])
+* Use a mock or real OPC‑UA server (e.g., with `python-opcua` demo server) 
 * Create Caldera operations that invoke the plugin under controlled conditions
 * Confirm functionality: authentication, browsing, reading, writing
 * **A test demo Adversary is provided in the `adversaries` folder.**
@@ -87,7 +86,7 @@ Feel free to submit:
 
 ## License
 
-Licensed under the **Apache‑2.0** License. ([GitHub][3])
+Licensed under the **Apache‑2.0** License. 
 
 ---
 
