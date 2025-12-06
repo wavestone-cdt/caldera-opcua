@@ -1,0 +1,29 @@
+# Python virtual environments and directories starting with "."
+.*/
+!.git/
+!.gitignore
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Build directories
+build/
+dist/
+*.egg-info/
+
+# PyInstaller
+*.spec
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+

@@ -51,6 +51,21 @@ mv caldera-opcua /path/to/caldera/plugins/
 
 ---
 
+### Building the payloads ###
+# Create a Python virtual environment
+python -m venv .opcuapayload
+source .opcuapayload/bin/activate
+
+# Install PyInstaller
+pip install pyinstaller
+
+# Install the module requirements
+pip install asyncua ipparser cryptography tabulate action
+
+# Bundle the module using the provided script
+chmod +x create_payload.sh
+./createpayload.sh
+
 ## Usage Example
 
 Once installed, the plugin should appear within Caldera’s plugin library. You can leverage it in operations like:
